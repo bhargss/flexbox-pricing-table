@@ -1,0 +1,121 @@
+body {
+    font-family: "Sono", sans-serif;
+  }
+
+  /* Desktop */
+  .heading {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #806bf6;
+  }
+
+  .pricing-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    height: 100vh;
+}
+
+  .pricing-plan {
+      background-color: #f0f0f0; 
+      border-radius: 10px;
+      box-shadow: 2px 2px 1px #949090;
+      padding: 50px;
+      display: flex;
+      flex-flow: column; 
+      gap: 20px;
+      flex-basis: 0;
+  }
+  /* how to align content inside a flex item */
+  .plan-title, .plan-price {
+      text-align: center;
+      color:#806bf6;
+      font-weight: 600;
+      font-size: 1.25rem;
+  }
+
+  .plan-price {
+    font-size: 2.5rem;
+  }
+
+  .plan-features {
+    list-style: none; /*Did not do this part alone */
+  }
+
+  .plan-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #806bf6;
+    color: white;
+    width: 100px;
+    height: 30px;
+    align-self: center;
+  }
+
+  .plan-button:hover {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #806bf6;
+    background-color:#f0f0f0;
+    color:#806bf6;
+    width: 100px;
+    height: 30px;
+    align-self: center;
+  }
+
+  /* Hint: What can you do with a media query and flexbox? */ 
+  /*Use flex-wrap and change flex-flow as well for mobile display */
+  @media (min-width:650px) and (max-width:1220px) {
+    .pricing-container {
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .pricing-plan {
+        flex: 1 1 0;
+        max-width: 250px;
+        gap: 10px;
+        padding: 50px 50px 30px 50px;
+        height: 250px;
+    }
+
+    .plan-price {
+        font-size: 1.5rem;
+    }
+
+  }
+
+  @media (min-width:310px) and (max-width:649px) {
+    .pricing-container {
+      height: 100%;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    .pricing-plan {
+      flex: 1;
+      padding: 50px;
+      max-width: 250px;
+      /* Setting height of the .pricing-container to 100% instead of 100vh gives the page length after the cards
+      It is done because there is content even after 100vh so it is better to set height as 100% */
+    }
+
+    .pricing-plan:nth-child(2) {
+      width: 170px;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    .plan-price {
+      font-size: 1.5rem;
+    }
+  }
