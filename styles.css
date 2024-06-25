@@ -69,7 +69,7 @@ body {
   }
 
   /* Hint: What can you do with a media query and flexbox? */ 
-  /*Use flex-wrap and change flex-flow as well for mobile display */
+/* Tablet */
   @media (min-width:650px) and (max-width:1220px) {
     .pricing-container {
       flex-direction: row;
@@ -91,6 +91,7 @@ body {
 
   }
 
+/* Mobile */
   @media (min-width:310px) and (max-width:649px) {
     .pricing-container {
       height: 100%;
